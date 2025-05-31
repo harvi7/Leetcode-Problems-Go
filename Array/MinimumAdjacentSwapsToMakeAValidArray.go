@@ -1,5 +1,7 @@
 package array
 
+// https://www.youtube.com/watch?v=UlvnPb0fRlE
+
 func minimumSwaps(nums []int) int {
 	smallest, smallestIdx := nums[0], 0
 	largest, largestIdx := nums[0], 0

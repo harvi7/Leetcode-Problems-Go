@@ -1,5 +1,7 @@
+package array
+
 func singleNumber(nums []int) int {
-    result := -1
+	result := -1
 	m := make(map[int]int, len(nums))
 	for _, v := range nums {
 		m[v]++

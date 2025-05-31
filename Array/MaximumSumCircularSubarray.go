@@ -1,5 +1,9 @@
+package array
+
+import "math"
+
 func maxSubarraySumCircular(nums []int) int {
-    curMin, minSum := math.MaxInt32, math.MaxInt32
+	curMin, minSum := math.MaxInt32, math.MaxInt32
 	curMax, maxSum := -math.MaxInt32, -math.MaxInt32
 	total := 0
 	for i := 0; i < len(nums); i++ {
