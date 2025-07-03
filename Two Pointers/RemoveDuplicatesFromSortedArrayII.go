@@ -1,4 +1,4 @@
-package twoPointers
+package twopointers
 
 func removeDuplicatesII(nums []int) int {
 	if len(nums) < 2 {

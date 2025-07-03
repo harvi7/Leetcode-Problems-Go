@@ -1,4 +1,4 @@
-package twoPointers
+package twopointers
 
 func moveZeroes(nums []int) {
 	n := len(nums)

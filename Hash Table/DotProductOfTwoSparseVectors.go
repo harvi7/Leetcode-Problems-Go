@@ -1,4 +1,4 @@
-package hashTable
+package hashtable
 
 // https://www.youtube.com/watch?v=7OWu2_tTBN4
 
