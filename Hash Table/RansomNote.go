@@ -1,3 +1,5 @@
+package hashtable
+
 func canConstruct(ransomNote string, magazine string) bool {
 	var counts [26]int
 
@@ -6,7 +8,7 @@ func canConstruct(ransomNote string, magazine string) bool {
 	}
 
 	for _, c := range magazine {
-		counts[c - 'a']++
+		counts[c-'a']++
 	}
 
 	for _, c := range ransomNote {

@@ -1,4 +1,4 @@
-package twoPointers
+package twopointers
 
 func removeDuplicates(nums []int) int {
 	prev := nums[0]
