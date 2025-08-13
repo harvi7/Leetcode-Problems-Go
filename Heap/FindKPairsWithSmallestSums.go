@@ -1,30 +1,34 @@
+package heap
+
+import "container/heap"
+
 func kSmallestPairs(nums1 []int, nums2 []int, k int) [][]int {
-    ans := make([][]int, 0)
-    minHeap := &SetHeap{}
-    heap.Init(minHeap)
-    for i, v1 := range nums1 {
-        heap.Push(minHeap, Set{sum: v1 + nums2[0], i: i, j: 0})
-    }
+	ans := make([][]int, 0)
+	minHeap := &SetHeap{}
+	heap.Init(minHeap)
+	for i, v1 := range nums1 {
+		heap.Push(minHeap, Set{sum: v1 + nums2[0], i: i, j: 0})
+	}
 
-    for !minHeap.Empty() && k > 0 {
-        currentMin := heap.Pop(minHeap).(Set)
-        i, j := currentMin.i, currentMin.j
-        ans = append(ans, []int{nums1[i], nums2[j]})
+	for !minHeap.Empty() && k > 0 {
+		currentMin := heap.Pop(minHeap).(Set)
+		i, j := currentMin.i, currentMin.j
+		ans = append(ans, []int{nums1[i], nums2[j]})
 
-        nextElement := j + 1
-        if nextElement < len(nums2) {
-            heap.Push(minHeap, Set{sum: nums1[i] + nums2[nextElement], i: i, j: nextElement})
-        }
-        k--
-    } 
+		nextElement := j + 1
+		if nextElement < len(nums2) {
+			heap.Push(minHeap, Set{sum: nums1[i] + nums2[nextElement], i: i, j: nextElement})
+		}
+		k--
+	}
 
-    return ans
+	return ans
 }
 
 type Set struct {
-    sum int
-    i int
-    j int
+	sum int
+	i   int
+	j   int
 }
 
 type SetHeap []Set
