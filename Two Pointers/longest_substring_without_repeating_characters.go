@@ -1,7 +1,9 @@
+package twopointers
+
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/4239419/go-solution-great-explanation-and-full-description/?envType=study-plan-v2&envId=top-interview-150
 
 func lengthOfLongestSubstring(s string) int {
-    store := make(map[uint8]int)
+	store := make(map[uint8]int)
 	var left, right, result int
 
 	for right < len(s) {

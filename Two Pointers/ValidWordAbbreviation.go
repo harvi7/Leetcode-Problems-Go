@@ -1,6 +1,6 @@
-// https://www.youtube.com/watch?v=Sut-F029biM
-
 package twopointers
+
+// https://www.youtube.com/watch?v=Sut-F029biM
 
 func validWordAbbreviation(word string, abbr string) bool {
 	wordPtr, abbrPtr := 0, 0

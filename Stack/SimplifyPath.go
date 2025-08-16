@@ -1,9 +1,15 @@
+package stack
+
+import "strings"
+
 func simplifyPath(path string) string {
-    simplifiedPath := make([]string, 0)
+	simplifiedPath := make([]string, 0)
 	dirs := strings.Split(path, "/")
 
 	for _, dir := range dirs {
-		if dir == "" || dir == "." { continue }
+		if dir == "" || dir == "." {
+			continue
+		}
 		if dir != ".." {
 			simplifiedPath = append(simplifiedPath, dir)
 		} else if len(simplifiedPath) > 0 {
@@ -11,5 +17,5 @@ func simplifyPath(path string) string {
 		}
 	}
 
-	return "/" + strings.Join(simplifiedPath, "/")    
+	return "/" + strings.Join(simplifiedPath, "/")
 }

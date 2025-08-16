@@ -1,24 +1,26 @@
+package linkedList
+
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
-    if n <= 0 {
-        return head
-    }
-        
-    dummy := &ListNode{Next: head}
-    dummy.Next = head
-    preDelete := dummy
+	if n <= 0 {
+		return head
+	}
 
-    for i := 0; i < n; i++ {
-        if head == nil {
-            return nil
-        }
-        head = head.Next
-    }
+	dummy := &ListNode{Next: head}
+	dummy.Next = head
+	preDelete := dummy
 
-    for head != nil {
-        preDelete = preDelete.Next
-        head = head.Next
-    }
-    preDelete.Next = preDelete.Next.Next
+	for i := 0; i < n; i++ {
+		if head == nil {
+			return nil
+		}
+		head = head.Next
+	}
 
-    return dummy.Next
+	for head != nil {
+		preDelete = preDelete.Next
+		head = head.Next
+	}
+	preDelete.Next = preDelete.Next.Next
+
+	return dummy.Next
 }
