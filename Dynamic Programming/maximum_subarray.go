@@ -1,9 +1,4 @@
-func max(a int, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
+package dp
 
 func maxSubArray(nums []int) int {
 	maxSum := nums[0]

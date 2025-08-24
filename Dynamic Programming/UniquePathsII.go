@@ -1,4 +1,4 @@
-package dynamicProgramming
+package dp
 
 // https://leetcode.com/problems/unique-paths-ii/editorial/
 

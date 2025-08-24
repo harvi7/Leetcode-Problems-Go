@@ -1,10 +1,12 @@
+package string
+
 import (
 	"math"
 	"strings"
 )
 
 func myAtoi(s string) int {
-    s = strings.TrimSpace(s)
+	s = strings.TrimSpace(s)
 	if len(s) == 0 {
 		return 0
 	}
@@ -30,7 +32,7 @@ func myAtoi(s string) int {
 	// check for overflow
 	result := 0
 	for len(s) > 0 && s[0] >= '0' && s[0] <= '9' {
-		result = result * 10 + int(s[0] - '0')
+		result = result*10 + int(s[0]-'0')
 		if result > math.MaxInt32 {
 			if sign == 1 {
 				return math.MaxInt32

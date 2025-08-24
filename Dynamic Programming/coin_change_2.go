@@ -1,4 +1,4 @@
-package dynamicProgramming
+package dp
 
 // https://leetcode.com/problems/coin-change-ii/solutions/3226141/golang-dp/
 // https://www.youtube.com/watch?v=ruMqWViJ2_U&ab_channel=Techdose

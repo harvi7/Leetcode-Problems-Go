@@ -1,4 +1,4 @@
-package linkedList
+package linkedlist
 
 func sortList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {

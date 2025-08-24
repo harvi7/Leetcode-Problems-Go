@@ -1,4 +1,4 @@
-package linkedList
+package linkedlist
 
 // https://www.youtube.com/watch?v=l1hSUOaXLxc&ab_channel=CrackingFAANG
 

@@ -1,4 +1,4 @@
-package linkedList
+package linkedlist
 
 // https://www.youtube.com/watch?v=rKnD7rLT0lI&ab_channel=NeetCode
 
